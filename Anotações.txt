@@ -1,0 +1,157 @@
+github.com/gustavoguanabara
+gustavoguanabara.github.io
+
+HTml é uma linguagem focada em conteúdo (textos, imagens, videos, tabelas, etc)
+CSS é focado em design (cores, sombras, posicionamentos, tamanhos)
+JS trabalha com as interações em um site (menus, animações, popups, validações)
+
+ Front-end: foca na experiência e interatividade do usuário
+ Back-end: está mais interassado no seu código com o servidor, ou seja, nas tecnologias envolvidas do servidor (server-side)
+TAGS:
+
+  <p> Cria um parágrafo
+  <h1> até o <h6> títulos em níveis diferentes
+  <br> quebra um parágrafo
+  *Adicionar um emoji é preciso &#x(código do emoji na emojipedia)*
+  <a> Um link para outro documento. usa o atributo href //  hreflang= idioma original do documento que está ancorado  
+  // target= onde o documento vai abrir // rel= possui um valor específico para o link // Links para downloads usa o 
+  atributo download e o atributo type para identificar que tipo de arquivo se trata do download.
+
+ Imagens dinâmicas, que se alteram sozinhas, são necessárias para redimensionar dependendo da largura do navegador do 
+ cliente. usa a tag <picture> e dentro dela usa a tag <img> para deixar uma imagem padrão também a tag <source media
+ ="" srcset="" type=""> para variar a imagem dependendo do navegador.
+
+ Para usar áudios usa a tag <audio> e dentro dela vários <source scr="" type=""> para o navegador poder carregar um 
+ tipo de áudio se um não for. Na tag áudio usa atributos controls,
+ autoplay (para ligar o áudio assim que carregar a página), loop (para o áudio ficar em loop), também tem o atributo
+ preload que server para dizer quanto o áudio vai carregar. Valor "auto" carregar todas as informações do áudio quando
+ a página carregar, "metadata" para carregar quando o áudio for clicado. "none" não carrega nenhuma informação.
+ 
+ Vídeo em site usa a tag <video> ou pegando de outro lugar.
+ Usando a tag <vídeo> possui os mesmos atributos do audio e os "sources" porém gasta muita memória so site usando
+ esse método.
+ Para pegar um vídeo direto do Youtube, entre no vídeo que queira e vá em compartilha e em seguida ver incorporação,
+ copie o código que aparecer e coloque no seu site.
+ 
+   CSS
+
+ Há três maneiras de usar as CSS.
+ Dentro da tag acrescente um atributo "style" e digite tudo que queria deixar de estilo. Usa-se esse método em momen
+ tos muito específicos, caso queira mudar apenas uma linha de código.
+
+ Dentro da tag <head> coloque a tag <style> e depois digite a tag que deseja costumizar e todos os estilos serão colo
+ cados entre {}. Ex: <style> body{} </style>
+
+ Crie um "link:CSS" para um outro arquivo em CSS, nesse arquivo faça todas as costumizações que desejar e todas as
+ páginas em HTML terão o estilo que você montou.
+
+   Psicologia das Cores
+
+ As cores em um site tem um significado além de uma cor, as cores trazem uma psicologia no cérebro. Ex: Amarelo 
+ remete à felicidade. Por isso usar as cores adequadamente dependendo do conteúdo do seu site, faz com que o seu
+ cliente se interesse mais sobre ele.
+ Para alterar as cores usa o estilo back-ground color (altera a cor de fundo) e font-color (cor da fonte), também você
+ pode alterar manualmente caso queira uma cor mais específica.
+ Também pode usar códigos hexadecimais {0...F}, que é a RGB (Red Green Blue), isso significa a quantidade dessas cores
+ possui em determinado tom de outra cor. HSL também usa o mesmo conceito de RGB porém sem ser em hexadecimal e sim em
+ luminosidade e tonalidade.
+
+   Fontes
+ Fontes abaixadas externas -> font: #;  scr: url('(nome do arquivo)'.otf') format('opentype)
+ tipos de format -> opentype(otf), truetype(ttf), embedded-opentype, truetype-aat (Apple Advanced Typography), svg.
+ Alinhamentos de texto: left, right, justify, center.
+
+   ID, Class e Pseudo-classe
+	ID serve para identificar uma tag específica, nenhuma outra tag pode ter o mesmo id.(CSS -> #)
+	Class tem o mesmo objetivo do ID porém serve para agrupar mais de uma tag nela. (CSS -> .)
+	Pseudo-código (CSS -> :) dá para a tag algo especial. Exemplo: :hover (quando o usuário passsa o mouse em de
+     terminada área, essa área pode, por exemplo, mudar de cor).
+
+ Sombra em texto: Border-Shadow: 1px(horizontal) 1px(vertical) 1px(expassamento) black(cor);
+ Borda redonda Border-Radius: 10px(sup.esquerdo) 10px(sup.direito) 10px(inf.direito) 10px(inf.esquerdo);
+
+   Variáveis em CSS
+
+ As variáveis em CSS serão declaradas na -> :root{}. Dentro do root será declarado as variáveis, para o código entender
+ que é uma variável usa-se primeiro "--" e tudo depois é o nome dela. Ex: "--cor-principal: white;". Nesse exemplo
+ o nome da variável é "cor-principal" e a cor branca é definida na variável. Quando for definir uma cor apenas use
+ em uma tag na CSS a variável completa. Ex: "body{ color: var(--cor-principal);". A cor da variável, no caso branco,
+ será atribuída ao body. Não só com cores mas também funciona com fontes. Ex: "--fonte-principal: Arival, sans-serif;
+
+   Larguras máximas e mínimas 
+
+ Podem ser utilizadas usando -> max-width: ; min-width: ;. Por meio delas você pode definir qual o tamanho máximo e 
+ mínimo que uma tag HTML pode responder automaticamente. Por exemplo, se você define, por meio das CSS, que o 'main'
+ terá uma largura de 1000px, o conteúdo será limitado até a largura de 1000px. Não definir largura máixma ou mínima o
+ próprio site vai usar toda a largura máxima ou mínima do navegador.
+
+   Position 'relative' e 'absolute'
+
+ Configurando a posição com CSS, você pode definir como ela vai se comportar no navegador. Por exemplo, uma posição
+ relativa, você consegue configurar alguns pequenos detalhes do espaço que ela ocupa, já a posição absoluta ela 
+ sobrepõe todo o conteúdo, basicamente essa posição faz com que uma imagem, vídeo etc possa ficar por cima de outros
+ textos ou outras coisas.
+ Um exemplo que utilize essas posições é usar a posição absoluta em um vídeo para sobrepor um fundo customizável 
+ (fundo com uma cor diferente), esse fundo tendo uma posição relativa para poder configurar pequenos detalhes que
+ ele vai ocupar no espaço. Resumindo: nesse caso, a posição relativa serve como uma caixa(fundo customizado) e a
+ posição absoluta funciona como o conteúdo dentro dela(vídeo no meio desse fundo customizado).
+
+   Organizando listas na CSS
+
+ Existem várias coisas na CSS que podem ser usadas para customizar as listas usadas no html, elas são:
+ 1.list-style-position: geralmente quando você coloca uma lista dentro de uma div ou uma tag semântica, a lista
+   o marcador da lista acaba ficando de fora do espaço que deveria ocupar. Para resolver isso basta colocar 
+   em CSS: 'list-style-position: inside;' para que os marcadores fiquem posicionados dentro do espaço.
+
+ 2.columns: como o nome diz, você consegue dividir as listas em colunas. Tome cuidado, as vezes definir dividir em
+   muitas colunas, em outros dispositivos menores, pode ficar tudo embaralhado e misturado. Então, sempre preste
+   atenção nisso e veja como o seu site está se comportando em telas menores.
+
+ 3.List-style-type: Você consegue mudar o marcador das listas usando isso. Para pegar outro marcador pegue o código
+   do símbolo que quer (na Emojipedia), adicione o código do emoji e siga os seguintes passos:
+ Antes do código de emoji, você deve adicionar a barra inversa(\) para o emoji substituir o marcador genérico da
+ lista. Você também pode adicionar um pequeno espaçamento do novo marcador para o conteúdo usando "00A0", quando
+ for usar isso também use a barra inversa(não obrigatório). Exemplo: '\00A0\EMOJI'(espaçamento para esquerda); '\EMOJI\00A0'(espaçamento
+ para direita).
+
+ Extra: sobre esses emojis que dão para adicionar nos marcadores das listas, é possível fazer isso também em outros
+        conteúdo como uma palavra dentro de um parágrafo. Basta usar "CONTENT: ;" e o resto é aplicado da mesma forma
+        que se aplica a uma lista(\00A0\EMOJI).
+
+    Git e Github
+
+ Depois de finalizar um projeto que você criou, você se pergunta: onde eu posso armazenar os meus projetos?
+ Com isso em mente, surgem o Git e o GitHub. Ambos apresentam o objetivo de funcionar como repositórios para os seus
+projetos, entretanto, há algumas diferenças.
+ Git é um software instalado direto no seu computador. Ele é feito para salvar o histórico de cada modificação feita
+nos meus [nossos] arquivos, funcionando de forma offline e local. 
+ GitHub é um serviço web hospedado na nuvem. Ele guarda cópias remotas dos seus repositórios do Git e facilita o
+trabalho em equipe. Além de permitir compartilhar códigos, revisar alterações, gerenciar tarefas e usar o perfil
+como portfólio profissional.   
+  Principais Diferenças
+  Git   
+Software de controle de versão.   
+Repositório local (no computador).   
+Offline.   
+Funciona sozinho.
+  GitHub 
+Plataforma web de hospedagem.   
+Repositório na nuvem.   
+Dependente de internet.   
+Precisa do Git para funcionar.   
+GitHub Desktop   
+
+ Gerenciamento de repositórios:   Após criar um perfil no GitHub, colocar um repositório local e salvá-lo, é possível
+ainda fazer alterações em alguns arquivos, mas é preciso também salvar as alterações no GitHub.   
+ Para isso, no repositório local, é preciso realizar o comando "commit" (um botão azul que aparece). Fazendo isso,
+somente o seu repositório local será atualizado.   
+ Para atualizar o repositório remoto, basta apenas usar o comando "push" (também um botão azul que aparece no canto
+direito do GitHub Desktop). Agora sim, tanto o repositório remoto quanto o repositório local estarão atualizados 
+com qualquer mudança feita nos arquivos.   
+ Para criar repositórios locais, basta apenas ir no GitHub Desktop, abrir os arquivos, selecionar onde você vai criar 
+um repositório e pronto. Não há nenhum problema em criar vários repositórios em uma máquina, muito pelo contrário, 
+você organiza seus projetos de forma simples e fácil de achar.   
+ OBS: Você consegue alternar para outro repositório caso esteja trabalhando com vários.
+
+ Deletar repositórios: você precisa deletar o seu repositório local (usando o GitHub Desktop para mexer por lixeira) 
+e o seu repositório remoto (deletando manualmente na página web do GitHub nas configurações).   
