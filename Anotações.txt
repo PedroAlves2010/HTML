@@ -154,4 +154,36 @@ você organiza seus projetos de forma simples e fácil de achar.
  OBS: Você consegue alternar para outro repositório caso esteja trabalhando com vários.
 
  Deletar repositórios: você precisa deletar o seu repositório local (usando o GitHub Desktop para mexer por lixeira) 
-e o seu repositório remoto (deletando manualmente na página web do GitHub nas configurações).   
+e o seu repositório remoto (deletando manualmente na página web do GitHub nas configurações).
+
+
+ Imagens de fundo/Papéis de parede
+
+ Em HTML-CSS, você já aprendeu como usar imagens e formatá-las adequadamente ao seu site. Agora, você verá as imagens
+que não ocupam o conteúdo do site, não possuem semântica, servindo como apenas para o visual do site. Estas são as 
+imagens de fundo, também chamadas de papéis de parede.
+ Estas imagens não ocupam o conteúdo principal, ou seja, o conteúdo de fato fica sob a imagem, e também colocar outras
+imagens, vídeos, divs, etc sob a imagem de fundo. Na prática, utilizar as imagens de fundo são na CSS com o seguinte
+comando:
+
+                               background-image: URL ("imagem_arquivo.png/jpg");
+
+ Exemplo real: (flores.jpg - se o arquivo se chama)
+ Você tem baixado uma imagem de flores em jpg, você quer adicionar esta imagem no fundo do seu site. A imagem está 
+numa pasta chamada "imagens".
+ Como fazer:
+                               background-image: URL ("imagens/flores.jpg");
+
+ Também é possível adicionar imagens de fundo em divs, por exemplo, ocupando apenas uma parte do site e não o site
+todo.
+DIV {
+    background-image: URL ("imagens/flora.jpg");
+    border: 2px solid black;
+    width: 300 px;
+    height: 300 px;
+    border-radius: 10 px;
+}
+ Teste isso na prática e você verá a imagem de fundo ocupando apenas a caixa da div.
+ Use as imagens do pacote no capítulo 19.
+ OBS: neste último exemplo, caso a imagem de fundo seja muito grande em relação ao espaço que ela vai ocupar, a imagem
+não vai aparecer completa, somente uma pequena parte, dependendo do espaço disponível.
