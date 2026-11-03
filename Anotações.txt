@@ -87,14 +87,19 @@ TAGS:
 
    Position 'relative' e 'absolute'
 
- Configurando a posição com CSS, você pode definir como ela vai se comportar no navegador. Por exemplo, uma posição
- relativa, você consegue configurar alguns pequenos detalhes do espaço que ela ocupa, já a posição absoluta ela 
- sobrepõe todo o conteúdo, basicamente essa posição faz com que uma imagem, vídeo etc possa ficar por cima de outros
- textos ou outras coisas.
- Um exemplo que utilize essas posições é usar a posição absoluta em um vídeo para sobrepor um fundo customizável 
- (fundo com uma cor diferente), esse fundo tendo uma posição relativa para poder configurar pequenos detalhes que
- ele vai ocupar no espaço. Resumindo: nesse caso, a posição relativa serve como uma caixa(fundo customizado) e a
- posição absoluta funciona como o conteúdo dentro dela(vídeo no meio desse fundo customizado).
+ Esses comandos permitem posicionar caixas no nosso site de forma que desejamos, agora veja 2 tipos de posicionamento
+o 'RELATIVE' e 'ABSOLUTE'. Posicionamento relativo(elemento-pai) é estabelecido como padrão, colocando ou não esse  
+comando no CSS não faz diferença. O posicionamente absoluto(elemento-filho) inicialmente parece não fazer diferença
+mas nos permite usar dois outros comandos, 'TOP' e 'LEFT'.
+ TOP: estabele a distância entre o ponto superior esquerdo da caixa para o topo
+ LEFT: distância entre o ponto superior esquerdo da caixa para a esquerda
+ Além disso, outro comando importante é o 'TRANSFORMATION'. Ele é usado para transformar/alterar visualmente um 
+elemento, nesse caso, queremos centralizar o elemento-filho no elemento-pai, então usamos o translate.
+ Translate serve para alterarmos a posição do elemento absoluto no eixo-x e eixo-y (cima e esquerda), exemplo:
+ Centralizar uma caixa dentro da outra: o elemento-filho(absoluto) tem o TOP e o LEFT posicionados em 50% do elemento-
+-pai(relativo), ainda no elemento-filho usamos o TRANSFORM: translate (-50%, -50%); 50% para esquerda e 50% pra cima,
+pois está na negativa. Após isso, o centro do elemento-filho estará exatamente na mesma posição do centro do elemnto-
+-pai.
 
    Organizando listas na CSS
 
@@ -187,3 +192,21 @@ DIV {
  Use as imagens do pacote no capítulo 19.
  OBS: neste último exemplo, caso a imagem de fundo seja muito grande em relação ao espaço que ela vai ocupar, a imagem
 não vai aparecer completa, somente uma pequena parte, dependendo do espaço disponível.
+
+  Propriedades de backgrounds
+
+ Background-repeat -> Quantas vezes a imagem irá repetir, alguns comandos:
+ repeat: padrão; no-repeat: não se repete; repeat-y: repete somente na vertical; repeat-x: repete somente na
+horizontal.
+
+ background-position -> Onde ficará posicionado a imagem, alguns comandos:
+ top left: será posicionada no canto superior esquerdo; bottom right: posicionado no canto inferior direito; center
+center: será posicionado no centro.
+
+ background-size -> Regula o tamanho da imagem, montando como ela vai aparecer no site, existem dois tipos:
+ CONTAIN: a imagem ocupará 100% a view port mas terá distorções dependendo do dispositivo; COVER: também ocupará
+100$ da view port mas se regula automaticamente dependendo do tamanho da tela.
+
+ background-attachment: Especifica se a imagem rola junto com o conteúdo ou se ela fica fixa no fundo, dois tipos:
+ SCROLL: é o padrão, a imagem rola junto com o conteúdo, o que pode causar alguns problemas de continuação. FIXED:
+A imagem mantém se estática, ou seja, quando você rola o navegador somente o conteúdo, exceto a imagem, rola.
